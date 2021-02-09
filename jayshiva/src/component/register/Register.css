@@ -1,0 +1,63 @@
+.header__main {
+  min-width: 400px;
+}
+
+.register__line {
+  padding-top: 20px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 100%;
+}
+.register__orclass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  font-weight: 50;
+  padding: 15px 8px 0 8px;
+  color: white;
+}
+
+.register__links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.register__right {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+.register__gender__andDate {
+  display: flex;
+}
+.register__gender__option {
+  border: none;
+  width: 180px;
+  height: 35px;
+  font-size: 15px;
+}
+.register__option {
+  font-size: 15px;
+}
+.register__date__picker {
+  display: flex;
+  background-color: white;
+  margin-left: 20px;
+  flex: 1;
+  padding: 5px 0px 0px 5px;
+}
+
+.register__fa-facebook {
+  position: relative;
+  padding-left: 10px;
+  top: 5px;
+}
+.register__fa-twitter {
+  position: relative;
+  padding-left: 10px;
+  top: 5px;
+}
