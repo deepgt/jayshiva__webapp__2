@@ -1,0 +1,182 @@
+.main__container {
+  min-height: 100vh;
+  background-color: #807d7d;
+}
+
+.bg-layer {
+  background-color: rgb(0, 0, 0, 0.7);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 3rem 0 0.4rem 0;
+}
+
+.header__main {
+  max-width: 310px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 999;
+  padding: 3em 2em;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+}
+
+.main__icon {
+  text-align: center;
+}
+
+.main__icon span.fa {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.fa {
+  display: inline-block;
+  font-size: 14px;
+  font-size: inherit;
+}
+
+.icon1 {
+  margin: 0 0 1em;
+  padding: 0.8em 1em;
+  background: rgba(255, 255, 255, 0.94);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.icon1 span.fa {
+  color: #222;
+  width: 25px;
+  display: flex;
+}
+
+input {
+  outline: none;
+  font-size: 15px;
+  color: #222;
+  border: none;
+  width: 90%;
+  background: transparent;
+  letter-spacing: 1px;
+  height: 27px;
+}
+
+.checkbox {
+  display: flex;
+  flex: 1;
+  color: #fff;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 6px;
+}
+
+.bottom {
+  margin: 1em 0 0;
+}
+
+.btn {
+  background: #007cc0;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 0.8em 2em;
+  letter-spacing: 1px;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.link {
+  display: flex;
+  text-align: center;
+}
+
+p {
+  font-size: 17px;
+  color: #000;
+  display: inline-block;
+  width: 50%;
+  margin: 20px 0 0;
+  letter-spacing: 1px;
+}
+
+a {
+  font-size: 11px;
+  color: #e2e2e2;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+}
+
+.social {
+  margin: 4em 0 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+li {
+  display: flex;
+  margin: 0 5px;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.loginText {
+  padding-top: 5px;
+}
+
+.social ul li a {
+  background: rgba(255, 255, 255, 0.22);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.social a.facebook {
+  background: #3b5998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.social a.twitter {
+  background: #1da1f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.social a.google {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 20px;
+}
