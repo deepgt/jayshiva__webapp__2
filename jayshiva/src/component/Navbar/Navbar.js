@@ -30,7 +30,7 @@ function Navbar() {
           <div className="navbar__header">
             <Link to="/">
               <a href="" className="navbar__logo">
-                LocalHo
+                Jayshiva
               </a>
             </Link>
           </div>

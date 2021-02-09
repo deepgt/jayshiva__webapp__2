@@ -2,16 +2,17 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const {google} = require('googleapis');
 
 
 require('dotenv').config();
 
 const app = express();
 
-const CLIENT_ID = '806549128426-ilgab9875noeb30pckp7utbrjked0iit.apps.googleusercontent.com';
-const CLEINT_SECRET = 'ppFWwjRGA33xoJy3NDdK6_rz';
+const CLIENT_ID = '584201658311-felvvb1nnlnlikee9mvcr2ncghjcf244.apps.googleusercontent.com';
+const CLEINT_SECRET = '5UNmNsjDQXIh3I7XKRhrPUmt';
 const REDIRECT_URI ='https://developers.google.com/oauthplayground';
-const REFRESH_TOKEN = '1//04TPzm3q2luIiCgYIARAAGAQSNwF-L9IrF5G3OkicklHOWCaXbf_meMH-nxSJ2iRTAcMqtTw1q-n4HjZXNsmH3Mju1SSf3bCGncU';
+const REFRESH_TOKEN = '1//040KzGD_YO7oRCgYIARAAGAQSNwF-L9IrSM0UtkO1GuR8st8glVsjQmHhAO_mt2hi05F3h1ji3XBD79Z4nrI2oqsoQbhy1TQkHVA';
 const oAuth2Client = new google.auth.OAuth2(
   CLIENT_ID,
   CLEINT_SECRET,
@@ -31,6 +32,7 @@ app.use(
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 
 //sends to admin
 app.post("/send" ,(req, res) => {
@@ -63,7 +65,7 @@ app.post("/send" ,(req, res) => {
     service:'gmail',
     auth:{
       type: 'OAuth2',
-      user:"pisces981111@gmail.com",
+      user:"thakurisinghprashant@gmail.com",
       clientId: CLIENT_ID,
       clientSecret: CLEINT_SECRET,
       refreshToken: REFRESH_TOKEN,
@@ -72,8 +74,8 @@ app.post("/send" ,(req, res) => {
   })
   
   let mailOptions = {
-    from: "pisces981111@gmail.com", // sender address
-    to: "dipeshkumargupta99@gmail.com", // list of receivers
+    from: "thakurisinghprashant@gmail.com", // sender address
+    to: "leolion565185@gmail.com", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "u have a product", // plain text body
     html: output, // html body

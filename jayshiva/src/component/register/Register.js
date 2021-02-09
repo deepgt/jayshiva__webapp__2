@@ -52,7 +52,7 @@ function Register() {
         {/* 728x90 */}
         <div className="header__main">
           <div className="main__icon">
-            <span className="fa">localHo</span>
+            <span className="fa">Jayshiva</span>
           </div>
           <div className="header__leftbottom">
             <form action="/register" method="post" onSubmit={handleSubmit}>

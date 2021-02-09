@@ -42,7 +42,7 @@ function Login() {
         {/* 728x90 */}
         <div className="header__main">
           <div className="main__icon">
-            <span className="fa fa-eercast">localHo</span>
+            <span className="fa fa-eercast">Jayshiva</span>
           </div>
           <div className="header__leftbottom">
             <form action="/login" method="post" onSubmit={handleSubmit}>

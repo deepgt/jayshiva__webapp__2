@@ -42,19 +42,33 @@ function Product() {
 
   //shows the image in the page and sets the respective state 
   const product__desc_preview = (e) => {
+    if(e.target.files[0]){
     var image = document.getElementById("uploadPreview01");
     image.src = URL.createObjectURL(e.target.files[0]);
     setProductdescriptionimage(e.target.files[0]);
+    }
+    else{
+      setProductdescriptionimage("")
+    }
   };
   const product__features_preview = (e) => {
+    if(e.target.files[0]){
     var image = document.getElementById("uploadPreview02");
     image.src = URL.createObjectURL(e.target.files[0]);
     setProductfeaturesimage(e.target.files[0]);
+    }else{
+      setProductfeaturesimage("");
+    }
   };
   const product__shortdescription_preview = (e) => {
+    if(e.target.files[0]){
     var image = document.getElementById("uploadPreview03");
     image.src = URL.createObjectURL(e.target.files[0]);
     setProductshortdescimage(e.target.files[0]);
+    }
+    else{
+      setProductshortdescimage("")
+    }
   };
   const product__setproductimage_preview = (e) => {
     var image = document.getElementById("uploadPreview04");
@@ -68,6 +82,7 @@ function Product() {
   };
 
   const productdescriptionUpload=()=>{
+    if(productdescriptionimage){
     const uploadTask = Storage.ref(`user_post_images/${currentUser.email}/${productdescriptionimage.name}`)
       .put(productdescriptionimage);
     uploadTask.on(
@@ -85,9 +100,11 @@ function Product() {
         })
       }
     )
+    }
   }
 
   const productfeaturesUpload=()=>{
+    if(productfeaturesimage){
     const uploadTask = Storage.ref(`user_post_images/${currentUser.email}/${productfeaturesimage.name}`)
       .put(productfeaturesimage);
     uploadTask.on(
@@ -104,10 +121,11 @@ function Product() {
           setProductfeaturesimageURL(url)
         })
       }
-    )
+    )}
   }
 
   const productshortdescriptionUpload=()=>{
+    if(productshortdescimage){
     const uploadTask = Storage.ref(`user_post_images/${currentUser.email}/${productshortdescimage.name}`)
       .put(productshortdescimage);
     uploadTask.on(
@@ -125,6 +143,7 @@ function Product() {
         })
       }
     )
+    }
   }
 
   const productimageUpload=()=>{
@@ -247,7 +266,7 @@ function Product() {
                     // placeholder="Product name"
                     value={productname}
                     onChange={(e) => setProductname(e.target.value)}
-                    required
+                  
                   />
                 </div>
                 <div className="line"></div>
@@ -265,6 +284,7 @@ function Product() {
                       className="product__descimg"
                       type="file"
                       onChange={product__desc_preview}
+                      
                     />
                     <img id="uploadPreview01" alt="" />
                   </div>
@@ -285,6 +305,7 @@ function Product() {
                       type="file"
                       // placeholder="Product Features"
                       onChange={product__features_preview}
+                      
                     />
                     <img id="uploadPreview02" alt="" />
                   </div>
@@ -399,6 +420,7 @@ function Product() {
                       type="file"
                       // placeholder="please enter all the sizes for the product"
                       onChange={product__setproductimage_preview}
+                      required
                     />
                     <img id="uploadPreview04" alt="" />
                   </div>
@@ -412,6 +434,7 @@ function Product() {
                       type="file"
                       // placeholder="please enter all the sizes for the product"
                       onChange={product__galleryimages_preview}
+                      required
                     />
                     <img id="uploadPreview05" alt="" />
                   </div>
