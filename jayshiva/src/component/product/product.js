@@ -202,7 +202,7 @@ function Product() {
     galleryimageURL);
 
     axios
-      .post("http://localhost:5000/send",{productname,
+      .post("https://www.jayshiva.com/vendor-page/send",{productname,
       productdescription,
       productfeatures,
       productshortdescription,
